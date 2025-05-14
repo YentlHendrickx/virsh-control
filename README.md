@@ -95,7 +95,7 @@ RETRY_INTERVAL=5
 
 ## VM Configuration
 
-In the `configs` directory you can find the XML configuration files that I personally use in my setup. These can be loaded into librit using the `virsh defin` or `virsh create` commands. Alternatively, you can use the `virt-manager` GUI to load these files. The XML files are:
+In the `configs` directory you can find the XML configuration files that I personally use in my setup. These can be loaded into libvirtd using the `virsh define` or `virsh create` commands. Alternatively, you can use the `virt-manager` GUI to load these files. The XML files are:
 * `win11.xml`: Windows 11 VM configuration -> [link](configs/win11.xml)
 
 ## Error Handling
