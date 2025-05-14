@@ -32,6 +32,14 @@ A simple Bash script to start, stop, and connect to a libvirt-managed virtual ma
    ln -s /usr/local/bin/vm-control.sh /usr/local/bin/vmctl
    ```
 
+4. (Optional) Set up an alias in your shell configuration file (e.g., `.bashrc` or `.zshrc`):
+
+   ```sh
+   alias win11-up='/usr/local/bin/vm-control.sh --name win11'
+   alias win11-down='/usr/local/bin/vm-control.sh -s --name win11'
+   ```
+
+
 ## Usage
 
 ```sh
@@ -84,6 +92,11 @@ MAX_RETRIES=10
 # Seconds to wait between retries
 RETRY_INTERVAL=5
 ```
+
+## VM Configuration
+
+In the `configs` directory you can find the XML configuration files that I personally use in my setup. These can be loaded into librit using the `virsh defin` or `virsh create` commands. Alternatively, you can use the `virt-manager` GUI to load these files. The XML files are:
+* `win11.xml`: Windows 11 VM configuration -> [link](configs/win11.xml)
 
 ## Error Handling
 
